@@ -1,0 +1,294 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77b300 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header .nav-toggle {
+    display: none;
+}
+
+header .nav-menu {
+    float: right;
+}
+
+header .nav-menu ul {
+    margin: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Intro section */
+.intro {
+    background: #e2e2e2;
+    padding: 50px 0;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro-image {
+    transform: perspective(600px) rotateY(10deg);
+    transition: transform 0.5s;
+}
+
+.intro-image:hover {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.intro-text {
+    max-width: 600px;
+    animation: slideInLeft 2s ease-in-out;
+}
+
+/* About section */
+.about {
+    background: #fff;
+    padding: 50px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.social-links a {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.social-links a:hover {
+    background: #77b300;
+}
+
+/* Projects section */
+.projects {
+    background: #e2e2e2;
+    padding: 50px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.project .btn:hover {
+    background: #77b300;
+}
+
+/* Achievements section */
+.achievements {
+    background: #fff;
+    padding: 50px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.footer .social-links a {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #77b300;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.footer .social-links a:hover {
+    background: #333;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    animation: zoomIn 0.3s;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Medium image size */
+.medium-size {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.medium-size:hover {
+    transform: scale(1.1);
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #77b300;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .nav-toggle {
+        display: block;
+    }
+
+    header .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    header .nav-menu.nav-menu_visible {
+        display: flex;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image {
+        margin-top: 20px;
+    }
+}
+
